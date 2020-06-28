@@ -6,16 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
 
-    <link rel="stylesheet" href="assets/style.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="assets/style.css" />
 
     <title>Document</title>
 </head>
 <body>
 
     <!--Header-->
-    <div class="container mt-5">
+    <div class="container mt-5 mb-3">
         <div class="row">
             <div class="col-3">
             </div>
@@ -32,14 +39,14 @@
             
             <div class="col-sm-3">
 
-                <div class="card sidenav">
+                <div class="card sidenav border-0 rounded-0">
                     <div class="card-body">
-                        <h5>Search for a city:</h5>
+                        <h6>Search for a city:</h6>
                         <div class="input-group mb-3">
-                            <input type="text" id="city-name" class="form-control" placeholder="Enter City" aria-label="Enter city name" aria-describedby="basic-addon2">
+                            <input type="text" id="city-name" class="form-control rounded-0" placeholder="Enter City" aria-label="Enter city name" aria-describedby="basic-addon2">
                             <div class="input-group-append">
                             <!-- <button id="add-city" class="btn btn-primary btn-sm" type="button">Button</button> -->
-                            <button id="add-city" type="submit" class="btn btn-primary btn-sm">Submit</button>
+                            <button id="add-city" type="submit" class="btn btn-primary btn-sm rounded-0">Submit</button>
                             </div>
                         </div>
                     </div>
@@ -49,8 +56,9 @@
             <!--Main data section-->
             <div class="col-sm-9">
 
-                <div class="card">
+                <div class="card rounded-0">
                     <div class="card-body" id="main-data">
+                        <h1><p id="currentDay" class="lead"></p></h1>
                     <!-- <h1 class="city-input-main"></h1>
                     <p class="temp-main mb-2"></p>
                     <p class="humidity-main mb-2"></p>
@@ -59,55 +67,59 @@
                     </div>
                 </div>
 
-                <!--5 day forecast cards-->
-                <div class="row mt-3">
+                <div class="container-fluid">
 
-                    <div class="col forecast1">
-                        <div class="card">
-                            <div class="card-body" id="data-1">
-                            
-                            
+                    <!--5 day forecast cards-->
+                    <div class="row mt-3">
+
+                        <div class="col forecast1 px-0">
+                            <div class="card rounded-0">
+                                <div class="card-body" id="data-1">
+                                
+                                
+                                </div>
                             </div>
+
                         </div>
 
-                    </div>
-
-                    <div class="col forecast2">
-                        <div class="card">
-                            <div class="card-body" id="data-2">
-                            
-                            
+                        <div class="col forecast2 px-0">
+                            <div class="card rounded-0">
+                                <div class="card-body" id="data-2">
+                                
+                                
+                                </div>
                             </div>
+
                         </div>
 
-                    </div>
-
-                    <div class="col forecast3">
-                        <div class="card">
-                            <div class="card-body" id="data-3">
-                            
-                            
+                        <div class="col forecast3 px-0">
+                            <div class="card rounded-0">
+                                <div class="card-body" id="data-3">
+                                
+                                
+                                </div>
                             </div>
+
                         </div>
 
-                    </div>
-
-                    <div class="col forecast4">
-                        <div class="card">
-                            <div class="card-body" id="data-4">
-                            
-                            
+                        <div class="col forecast4 px-0">
+                            <div class="card rounded-0">
+                                <div class="card-body" id="data-4">
+                                
+                                
+                                </div>
                             </div>
+
                         </div>
 
-                    </div>
-
-                    <div class="col forecast5">
-                        <div class="card">
-                            <div class="card-body" id="data-5">
-                            
-                            
+                        <div class="col forecast5 px-0">
+                            <div class="card rounded-0">
+                                <div class="card-body" id="data-5">
+                                
+                                
+                                </div>
                             </div>
+
                         </div>
 
                     </div>

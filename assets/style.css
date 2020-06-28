@@ -14,8 +14,8 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
-	font: inherit;
+	
+	
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -23,9 +23,9 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body {
+/* body {
 	line-height: 1;
-}
+} */
 ol, ul {
 	list-style: none;
 }
@@ -42,7 +42,11 @@ table {
 	border-spacing: 0;
 }
 
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .sidenav {
-    background-color: rgb(206, 206, 206);
+    background-color: rgb(220, 220, 220);
 }
 
