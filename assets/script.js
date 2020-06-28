@@ -4,7 +4,7 @@ $(document).ready(function () {
     // var cityInput = $("#city-name").val();
     var cityInput = "Oakland";
     var APIKey = "21cb192c9ac239ad019084d15bf75466";
-    var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityInput + "&appid=" + APIKey;
+    var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityInput + "&units=imperial&appid=" + APIKey;
     
 
     // $("#add-city").on("click", function (event) {
@@ -36,11 +36,12 @@ $(document).ready(function () {
         console.log(response);
         var iconcode = response.list[0].weather[0].icon;
         var iconURL = "https://openweathermap.org/img/wn/" + iconcode + "@2x.png";
-        
+        var iconImage = iconURL;
         
 
         $("#main-data").append("<h2>" + response.city.name + "</h2>");
-        $("#main-data").append("<div> <p>Temperature: " + response.list[0].main.temp + "&deg;F</p> </div>");
+        $("#main-data").append("<p>Current Conditions:  <img src='https://openweathermap.org/img/wn/" + iconcode + "@2x.png'" + "</p>");
+        $("#main-data").append("<div> <p>Temperature: " + response.list[0].main.temp + " &deg;F</p> </div>");
 
         
     });
