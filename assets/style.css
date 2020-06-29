@@ -62,7 +62,12 @@ table {
     background: linear-gradient(333deg, rgba(77,105,242,1) 0%, rgba(64,112,228,1) 31%, rgba(0,212,255,1) 100%);;
     margin: auto;
     margin-bottom: 20px;
+    padding: 8px;
+    color: white;
+}
+#add-city {
+    background: rgb(77,105,242);
+    background: linear-gradient(333deg, rgba(77,105,242,1) 0%, rgba(64,112,228,1) 31%, rgba(0,212,255,1) 100%);;
 
-    
 }
 
