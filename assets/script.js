@@ -7,10 +7,10 @@ $(document).ready(function () {
     });
 
     // $("#currentDay").text(moment().format("dddd, MMMM Do"));
-    $("#currentDay").text(moment().format('DD/MM/YYYY'));
+    $("#currentDay").text(moment().format('MM/DD/YYYY'));
     // moment().calendar(referenceDay);
 
-    console.log("hello");
+    // console.log("hello");
     // var cityInput = $("#city-name").val();
     var cityInput = "Oakland";
     //five day forecast api key

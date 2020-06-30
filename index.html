@@ -40,16 +40,20 @@
             <div class="col-sm-3">
 
                 <div class="card sidenav border-0 rounded-0">
+                    
                     <div class="card-body">
-                        <h6>Search for a city:</h6>
+                         <h6>Search for a city:</h6>
                         <div class="input-group mb-3">
-                            <input type="text" id="city-name" class="form-control rounded-0" placeholder="Enter City" aria-label="Enter city name" aria-describedby="basic-addon2">
+                             <input type="text" id="city-name" class="form-control rounded-0" placeholder="Enter City" aria-label="Enter city name" aria-describedby="basic-addon2">
                             <div class="input-group-append">
-                            <!-- <button id="add-city" class="btn btn-primary btn-sm" type="button">Button</button> -->
-                            <button id="add-city" type="submit" class="btn btn-primary btn-sm rounded-0">Submit</button>
+                                <button id="add-city" type="submit" class="btn btn-primary btn-sm rounded-0">Submit</button>
                             </div>
                         </div>
+                        <!--Stored input data for cities-->
+                        <ul id="searchedLocations">
+                        </ul>
                     </div>
+                    
                 </div>
             </div>
 
@@ -58,15 +62,14 @@
 
                 <div class="card rounded-0 mb-2">
                     <div class="card-body" id="main-data">
-                        <h1><p id="currentDay" class="lead"></p></h1>
-                    <!-- <h1 class="city-input-main"></h1>
-                    <p class="temp-main mb-2"></p>
-                    <p class="humidity-main mb-2"></p>
-                    <p class="wind-speed-main mb-2"></p>
-                    <div class="wind-speed-main mb-2"></div> -->
+                        <h1 id="city-header"></h1>
+                        <h1 id="city-title" class="city-input-main"></h1>
+                        <p id="city-temp" class="temp-main mb-2"></p>
+                        <p id="city-humidity" class="humidity-main mb-2"></p>
+                        <p id="city-wind" class="wind-speed-main mb-2"></p>
                     </div>
                 </div>
-
+                
                 <div class="mb-2">
                     <h4>5 Day Forecast:</h4>
                 </div>
@@ -75,84 +78,35 @@
 
                     <!--5 day forecast cards-->
                     <div class="box day1" id="fcast1">
-                        <p id="currentDay" class="lead">Date</p>
-                        <br>
-                        <br>
+                        <p id="date1" class="lead"></p>
+                        <img id="date1-img"/>
+                        <p id="date1-temp"></p>
+                        <p id="date1-humidity"></p>
                     </div>
-                    <div class="box day2" id="fcast2">
-                        <p id="currentDay" class="lead">Date</p>
-                        <br>
-                        <br>
+                    <div class="box day2" id="fcast1">
+                        <p id="date2" class="lead"></p>
+                        <img id="date2-img"/>
+                        <p id="date2-temp"></p>
+                        <p id="date2-humidity"></p>
                     </div>
-                    <div class="box day3" id="fcast3">
-                        <p id="currentDay" class="lead">Date</p>
-                        <br>
-                        <br>
+                    <div class="box day3" id="fcast1">
+                        <p id="date3" class="lead"></p>
+                        <img id="date3-img"/>
+                        <p id="date3-temp"></p>
+                        <p id="date3-humidity"></p>
                     </div>
-                    <div class="box day4" id="fcast4">
-                        <p id="currentDay" class="lead">Date</p>
-                        <br>
-                        <br>
+                    <div class="box day4" id="fcast1">
+                        <p id="date4" class="lead"></p>
+                        <img id="date4-img"/>
+                        <p id="date4-temp"></p>
+                        <p id="date4-humidity"></p>
                     </div>
-                    <div class="box day5" id="fcast5">
-                        <p id="currentDay" class="lead">Date</p>
-                        <br>
-                        <br>
+                    <div class="box day5" id="fcast1">
+                        <p id="date5" class="lead"></p>
+                        <img id="date5-img"/>
+                        <p id="date5-temp"></p>
+                        <p id="date5-humidity"></p>
                     </div>
-                    
-                    <!-- <div class="row mt-3">
-
-                        <div class="col forecast1">
-                            <div class="card rounded-0">
-                                <div class="card-body" id="data-1">
-                                
-                                
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="col forecast2">
-                            <div class="card rounded-0">
-                                <div class="card-body" id="data-2">
-                                
-                                
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="col forecast3">
-                            <div class="card rounded-0">
-                                <div class="card-body" id="data-3">
-                                
-                                
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="col forecast4">
-                            <div class="card rounded-0">
-                                <div class="card-body" id="data-4">
-                                
-                                
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="col forecast5">
-                            <div class="card rounded-0">
-                                <div class="card-body" id="data-5">
-                                
-                                
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div> -->
 
                 </div>
 
