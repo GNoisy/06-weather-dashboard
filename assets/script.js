@@ -10,7 +10,11 @@ $(document).ready(function () {
     $("#currentDay").text(moment().format('MM/DD/YYYY'));
     // moment().calendar(referenceDay);
 
-    // console.log("hello");
+});
+
+$("#add-city").on("click", function (event) {
+
+
     // var cityInput = $("#city-name").val();
     var cityInput = "Oakland";
     //five day forecast api key
@@ -81,36 +85,16 @@ $(document).ready(function () {
         
         
     // });
-
-    
-    
-
-    
- 
-        
-
-    
-});
-
-
-
-
- // $("#add-city").on("click", function (event) {
         
     
-    //     // ajax call for city input by user
-    //     $.ajax({
-    //         url: queryURL,
-    //         method: "GET"
-    //       }).then(function(response) {
-            
-  
-    //         console.log(response);
-    //         // Storing the rating data
-    //         var rating = response.Rated;
-  
-            
-    //     });
+    
 
-        
-    // })
+       
+})
+
+
+    
+
+
+
+
