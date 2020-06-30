@@ -157,44 +157,6 @@ $("#add-city").on("click", function (event) {
         var icon5 = "http://openweathermap.org/img/w/" + iconcode5 + ".png";
         $("#date5-img").attr("src", icon5);
         //end of fifth day card//
-
-
-
-
-
-
-        //main section of html page
-        // $("#main-data").append("<h1>" + response.city.name + iconImage + "</h1>");
-        // // $("#main-data").append("<p>Current Conditions: " + iconImage + "</p>");
-        // $("#main-data").append("<div> <p><strong>Current Condition</strong>: " + response.list[0].weather[0].description + "</p> </div>");
-        // $("#main-data").append("<div> <p><strong>Temperature</strong>: " + response.list[0].main.temp + " &deg;F</p> </div>");
-        // $("#main-data").append("<div> <p><strong>Humdity</strong>: " + response.list[0].main.humidity + "%</p> </div>");
-        // $("#main-data").append("<div> <p><strong>Wind Speed</strong>: " + response.list[0].wind.speed + "</p> </div>");
-        // $("#main-data").append("<div> <p><strong>UV Index</strong>: " + "</p></div>");
-
-        
-        // //five day forecast divs
-        // //div 1
-        // $("#fcast1").append("<p>Temp: " + response.list[1].main.temp + " &deg;F</p>");
-        // $("#fcast1").append("<p>Humdity: " + response.list[1].main.humidity + "%</p>");
-
-        // //div2
-        // $("#fcast2").append("<p>Temp: " + response.list[2].main.temp + " &deg;F</p>");
-        // $("#fcast2").append("<p>Humdity: " + response.list[2].main.humidity + "%</p>");
-
-        // //div3
-        // $("#fcast3").append("<p>Temp: " + response.list[3].main.temp + " &deg;F</p>");
-        // $("#fcast3").append("<p>Humdity: " + response.list[3].main.humidity + "%</p>");
-
-        // //div4
-        // $("#fcast4").append("<p>Temp: " + response.list[4].main.temp + " &deg;F</p>");
-        // $("#fcast4").append("<p>Humdity: " + response.list[4].main.humidity + "%</p>");
-
-        // //div4
-        // $("#fcast5").append("<p>Temp: " + response.list[5].main.temp + " &deg;F</p>");
-        // $("#fcast5").append("<p>Humdity: " + response.list[5].main.humidity + "%</p>");
-    
-        
         
     });
 
