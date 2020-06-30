@@ -16,7 +16,7 @@ $("#add-city").on("click", function (event) {
 
 
     var cityInput = $("#city-name").val();
-    var cityInput = "Oakland";
+   
     //five day forecast api key
     var APIKey = "21cb192c9ac239ad019084d15bf75466";
     var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityInput + "&units=imperial&appid=" + APIKey;
@@ -39,11 +39,30 @@ $("#add-city").on("click", function (event) {
         var iconcode = response.list[0].weather[0].icon;
         var iconImage =
         "<img src='http://openweathermap.org/img/w/" + iconcode + ".png'>";
-  
+        
+        //Main header info//
         var name = response.city.name;
         var date = "(" + moment().format("MM/DD/YYYY") + ")";
         var headerHTML = name + " " + date + " " + iconImage;
         $("#city-header").html(headerHTML);
+        //end main header//
+        
+        //First of 5 day forecast card//
+        var date1 = moment().add(1, "days").format("MM/DD/YYYY");
+        $("#date1").text(date1);
+  
+        var temp1 = "Temp: " + response.list[0].main.temp;
+        var humidity1 = "Humidity: " + response.list[0].main.humidity;
+  
+        $("#date1-temp").text(temp1 + "° F");
+        $("#date1-humidity").text(humidity1 + "%");
+  
+        var iconcode1 = response.list[0].weather[0].icon;
+        var icon1 = "http://openweathermap.org/img/w/" + iconcode1 + ".png";
+        $("#date1-img").attr("src", icon1);
+        //end of first 5 day forecast card//
+
+
 
         //main section of html page
         // $("#main-data").append("<h1>" + response.city.name + iconImage + "</h1>");
