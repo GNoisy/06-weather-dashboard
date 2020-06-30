@@ -7,8 +7,16 @@ $(document).ready(function () {
     });
 
     // $("#currentDay").text(moment().format("dddd, MMMM Do"));
-    $("#currentDay").text(moment().format('MM/DD/YYYY'));
+    // $("#currentDay").text(moment().format('MM/DD/YYYY'));
     // moment().calendar(referenceDay);
+    var localStorageLocations = localStorage.getItem("locations");
+    var locations = JSON.parse(localStorageLocations);
+    if (Array.isArray(locations)) {
+      $("#searchedLocations").html("");
+      for (var i = 0; i < locations.length; i++){
+        $("#searchedLocations").append("<li>" + locations[i] + "</li>")
+      }
+    }
 
 });
 
@@ -16,6 +24,20 @@ $("#add-city").on("click", function (event) {
 
 
     var cityInput = $("#city-name").val();
+
+    var localStorageLocations = localStorage.getItem("locations");
+    var locations = JSON.parse(localStorageLocations);
+    if (Array.isArray(locations)) {
+      locations.push(cityInput);
+    } else {
+      locations = [cityInput];
+    }
+    localStorage.setItem("locations", JSON.stringify(locations));
+    
+    $("#searchedLocations").html("");
+    for (var i = 0; i < locations.length; i++){
+      $("#searchedLocations").append("<li>" + locations[i] + "</li>")
+    }
    
     //five day forecast api key
     var APIKey = "21cb192c9ac239ad019084d15bf75466";
@@ -45,8 +67,17 @@ $("#add-city").on("click", function (event) {
         var date = "(" + moment().format("MM/DD/YYYY") + ")";
         var headerHTML = name + " " + date + " " + iconImage;
         $("#city-header").html(headerHTML);
-        //end main header//
 
+        var temp = response.list[0].main.temp;
+        $("#city-temp").text("Temperature: " + temp + "° F");
+
+        var h = response.list[0].main.humidity;
+        $("#city-humidity").text("Humidity: " + h + "%");
+
+        var windSpeed = response.list[0].wind.speed;
+        $("#city-wind").text("Wind Speed: " + windSpeed + " MPH");
+        //end main header//
+        
         
         //First of 5 day forecast card//
         var date1 = moment().add(1, "days").format("MM/DD/YYYY");
